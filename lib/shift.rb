@@ -1,3 +1,4 @@
+require 'date'
 class Key
 
   attr_reader :key
@@ -22,6 +23,10 @@ class Key
   @key_hash[:C] += key[2..3]
   @key_hash[:D] += key[3..4]
   @key_hash
+  end
+
+  def format_date(date)
+    date.strftime("%d%m%y")
   end
 
 end
