@@ -16,5 +16,9 @@ class KeyTest < Minitest::Test
 
   def test_key_length
    assert_equal 5, key.key.length
- end
+  end
+
+  def test_key_can_be_generated
+   assert_equal "02715", @new_key.generate_key("02715")
+  end
 end
