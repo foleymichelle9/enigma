@@ -22,11 +22,11 @@ class Key
   end
 
   def key_shift(key)
-    @key_hash[:A] += key[0..1]
-    @key_hash[:B] += key[1..2]
-    @key_hash[:C] += key[2..3]
-    @key_hash[:D] += key[3..4]
-    @key_hash
+    @hash[:A] += key[0..1]
+    @hash[:B] += key[1..2]
+    @hash[:C] += key[2..3]
+    @hash[:D] += key[3..4]
+    @hash
   end
 
   def format_date(date)
