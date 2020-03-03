@@ -1,12 +1,17 @@
+require 'date'
 class Key
 
-  attr_reader :key
+  attr_reader :key, :date
 
   def initialize(key)
+    @date = date
     @key = key
     @hash = {:A => "", :B => "", :C => "", :D => ""}
   end
 
+  def character_set
+   ("a".."z").to_a << " "
+ end
 
   def generate_key(key)
     if key.length == 5
@@ -23,5 +28,14 @@ class Key
   @key_hash[:D] += key[3..4]
   @key_hash
   end
+
+  def format_date(date)
+    date.strftime("%d%m%y")
+  end
+
+  def test_it_can_square_date
+   date = Date.new(1995, 8, 4)
+   assert_equal 1672401025, key.square_date(date)
+ end
 
 end
