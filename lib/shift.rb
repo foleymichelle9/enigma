@@ -15,4 +15,6 @@ class Key
       @key = 5.times.map{Random.rand(10)}.join.to_s
     end
   end
+
+
 end
