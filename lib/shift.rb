@@ -1,4 +1,4 @@
-class Shift
+class Key
 
   attr_reader :key
 
