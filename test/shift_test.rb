@@ -29,4 +29,9 @@ class KeyTest < Minitest::Test
     expected = { :A => "02", :B => "27", :C => "71", :D => "15"}
     assert_equal expected, key.key_shift("02715")
   end
+
+  def test_it_can_format_date
+  date = Date.new(1995, 8, 4)
+  assert_equal "040895", key.format_date(date)
+  end
 end
