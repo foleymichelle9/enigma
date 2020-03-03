@@ -10,7 +10,7 @@ class Key
   end
 
   def character_set
-   ("a".."z").to_a << " "
+    ("a".."z").to_a << " "
  end
 
   def generate_key(key)
@@ -22,11 +22,11 @@ class Key
   end
 
   def key_shift(key)
-  @key_hash[:A] += key[0..1]
-  @key_hash[:B] += key[1..2]
-  @key_hash[:C] += key[2..3]
-  @key_hash[:D] += key[3..4]
-  @key_hash
+    @key_hash[:A] += key[0..1]
+    @key_hash[:B] += key[1..2]
+    @key_hash[:C] += key[2..3]
+    @key_hash[:D] += key[3..4]
+    @key_hash
   end
 
   def format_date(date)
@@ -34,8 +34,7 @@ class Key
   end
 
   def test_it_can_square_date
-   date = Date.new(1995, 8, 4)
-   assert_equal 1672401025, key.square_date(date)
+    date = Date.new(1995, 8, 4)
+    assert_equal 1672401025, key.square_date(date)
  end
-
 end

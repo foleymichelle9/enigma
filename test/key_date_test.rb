@@ -3,7 +3,6 @@ require './lib/shift'
 
 class KeyTest < Minitest::Test
 
-
   def test_it_exists
     key = Key.new("02715")
     assert_instance_of Key, key
@@ -31,9 +30,9 @@ class KeyTest < Minitest::Test
   end
 
   def test_it_can_format_date
-  key = Key.new("02715")
-  date = Date.new(1995, 8, 4)
-  assert_equal "040895", key.format_date(date)
+    key = Key.new("02715")
+    date = Date.new(1995, 8, 4)
+    assert_equal "040895", key.format_date(date)
   end
 
   def test_it_can_square_date
