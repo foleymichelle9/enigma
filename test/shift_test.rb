@@ -19,6 +19,6 @@ class KeyTest < Minitest::Test
   end
 
   def test_key_can_be_generated
-   assert_equal "02715", @new_key.generate_key("02715")
+   assert_equal "02715", key.generate_key("02715")
   end
 end
