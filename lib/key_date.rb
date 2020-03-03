@@ -33,8 +33,7 @@ class Key
     date.strftime("%d%m%y")
   end
 
-  def test_it_can_square_date
-    date = Date.new(1995, 8, 4)
-    assert_equal 1672401025, key.square_date(date)
- end
+  def square_date(date)
+    @date.to_i ** 2
+  end
 end
