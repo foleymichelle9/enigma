@@ -8,7 +8,10 @@ class Key
     @hash = {:A => "", :B => "", :C => "", :D => ""}
   end
 
-
+  def character_set
+   ("a".."z").to_a << " "
+ end
+ 
   def generate_key(key)
     if key.length == 5
       @key = key
