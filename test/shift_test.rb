@@ -11,6 +11,6 @@ class ShiftTest < Minitest::Test
   def test_it_has_attributes
     shift = Shift.new
     key = Key.new("02715")
-    assert_equal "02715", key.new
+    assert_equal "02715", key 
   end
 end

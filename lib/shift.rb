@@ -4,5 +4,6 @@ class Shift
 
   def initialize(key)
     @key = key
+    @hash = {:A => "", :B => "", :C => "", :D => ""}
   end
 end
